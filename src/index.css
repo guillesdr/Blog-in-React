@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Quicksand;
+  color: black;
+  font-size: 16px
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+h1,
+h2 {
+  margin-bottom: 12px;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url('./assets/font/Quicksand.ttf')
+}
+
+@font-face {
+  font-family: Millenial;
+  src: url('./assets/font/Millenial.otf')
+}
