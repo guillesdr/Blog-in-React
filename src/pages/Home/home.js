@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Card from './components/card/Card';
 import { getFirebase } from "../../firebase";
 import './home.css';
 
@@ -34,23 +34,9 @@ const Home = () => {
   return (
     <>
       <div className='card__section'>
-      {blogPosts.map(blogPost => (
-        <section key={blogPost.slug} className="card">
-          <img src={blogPost.coverImage} alt={blogPost.coverImageAlt} />
-          <div className="card__content">
-            <h2>
-              {blogPost.title} &mdash;{" "}
-              <span style={{ color: "#5e5e5e" }}>{blogPost.datePretty}</span>
-            </h2>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: `${blogPost.content.substring(0, 200)}...`
-              }}
-            ></p>
-            <Link to={`/post/${blogPost.slug}`} className='card__content--link'> + Leer </Link>
-          </div>
-        </section>
-      ))}
+        {blogPosts && blogPosts.map( post => (
+          <Card post={post} key={post.slug} />
+        ))}
       </div>
     </>
   );
