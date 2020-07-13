@@ -19,7 +19,9 @@ const Card = ({ post }) => {
                     __html: `${content.substring(0, 200)}...`
                 }}
                 ></p>
-                <Link to={`/post/${slug}`} className='card__content--link'> + Leer </Link>
+                <div className='card__content--button-read-more'>
+                    <Link to={`/post/${slug}`} className='card__content--link'> + Leer </Link>
+                </div>
             </div>
         </section>
     )

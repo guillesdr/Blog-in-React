@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { getFirebase } from "../../firebase";
+import './post.css';
 
 const Post = ({ match }) => {
 
@@ -33,10 +34,12 @@ const Post = ({ match }) => {
 
   return (
     <>
-      <img src={currentPost.coverImage} alt={currentPost.coverImageAlt}/>
-      <h1>{currentPost.title}</h1>
-      <em>{currentPost.datePretty}</em>
-      <p dangerouslySetInnerHTML={{ __html: currentPost.content }}></p>
+      <div className='card__post--container'>
+        <img src={currentPost.coverImage} alt={currentPost.coverImageAlt}/>
+        <h1>{currentPost.title}</h1>
+        <em>{currentPost.datePretty}</em>
+        <p dangerouslySetInnerHTML={{ __html: currentPost.content }}></p>
+      </div>
     </>
   );
 };

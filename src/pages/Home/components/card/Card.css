@@ -21,3 +21,13 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+.card__content--button-read-more {
+    margin-top: 20px;
+    width: fit-content;
+    height: fit-content;
+    background: #cae9ad;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
