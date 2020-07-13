@@ -1,0 +1,13 @@
+.new-post__container {
+    width: 100%;
+    height: fit-content;
+    background: #cae9ad;
+    padding: 20px 20px 1px 20px;
+    border-radius: 10px;
+    margin-top: 20px
+}
+
+.new-post__container h1 {
+    font-size: 18px;
+
+}
